@@ -76,6 +76,3 @@ If you would like to contribute to this project, feel free to open an issue or s
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
-
-Please remember to replace the placeholders like `your-username` and `your_flask_app.py` with your actual GitHub username and the name of your Flask application file. Customize the content as needed for your specific project details.
