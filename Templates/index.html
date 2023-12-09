@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer's Disease Prediction Test</title>
+    <link rel="stylesheet" href="../static/style1.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="../static/Firstpage_background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div id="container">
+                <div id="welcome-message">
+                    <p>Welcome to the Alzheimer's Disease Prediction Test</p>
+                </div>
+                <div class="typing-container">
+                    <p id="typing-text"></p>
+                </div>
+                
+                <a href="{{ url_for('new_page') }}" class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Take a test</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script>
+        // Function for the text typing effect
+        function typeText(target, message, speed) {
+            let index = 0;
+            const intervalId = setInterval(function() {
+                if (index < message.length) {
+                    document.getElementById(target).innerHTML += message.charAt(index);
+                    index++;
+                } else {
+                    clearInterval(intervalId);
+                }
+            }, speed);
+        }
+
+        // Call the function to start the typing effect
+        typeText("typing-text", "Discover the benefits of detecting Alzheimer's disease at an early stage.", 50);
+    </script>
+
+</body>
+</html>

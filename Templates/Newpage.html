@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer's Disease Prediction Test</title>
+    <link rel="stylesheet" href="../static/Newpage.css">
+</head>
+<body>
+
+    <div class="test-page">
+        <div class="background-video">
+            <video autoplay loop muted>
+                <source src="../static/Newpage_background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="form-container">
+            <form action="/predict" method="post">
+                <div class="form-heading">
+                    <h2>Alzheimer's Disease Assessment</h2>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="column">
+                            <label>ASF:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter ASF"
+                                value={this.state.asf}
+                                onChange={this.handleChange}
+                                name="asf"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                        <div class="column">
+                            <label>MR DELAY:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter MR DELAY"
+                                value={this.state.mrDelay}
+                                onChange={this.handleChange}
+                                name="mrDelay"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <label>GENDER:</label>
+                            <select
+                                value={this.state.gender}
+                                onChange={this.handleChange}
+                                name="gender"
+                            >
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                               
+                            </select>
+                        </div>
+                        <div class="column">
+                            <label>AGE:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter AGE"
+                                value={this.state.age}
+                                onChange={this.handleChange}
+                                name="age"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Add similar blocks for other form fields... -->
+
+                        <div class="column">
+                            <label>EDUC:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter EDUC"
+                                value={this.state.educ}
+                                onChange={this.handleChange}
+                                name="educ"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                        <div class="column">
+                            <label>SES:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter SES"
+                                value={this.state.ses}
+                                onChange={this.handleChange}
+                                name="ses"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <label>MMSE:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter MMSE"
+                                value={this.state.mmse}
+                                onChange={this.handleChange}
+                                name="mmse"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                        <div class="column">
+                            <label>CDR:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter CDR"
+                                value={this.state.cdr}
+                                onChange={this.handleChange}
+                                name="cdr"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <label>eTIV:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter eTIV"
+                                value={this.state.etiv}
+                                onChange={this.handleChange}
+                                name="etiv"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                        <div class="column">
+                            <label>nWBV:</label>
+                            <input
+                                type="number"
+                                placeholder="Enter nWBV"
+                                value={this.state.nwbv}
+                                onChange={this.handleChange}
+                                name="nwbv"
+                                step="any"
+                                min="0"
+                                max="10000"
+                                required
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <button value="CHECK">Submit</button>
+            </form>
+
+           
+        </div>
+    </div>
+
+</body>
+</html>
